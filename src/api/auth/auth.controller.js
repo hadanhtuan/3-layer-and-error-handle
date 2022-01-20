@@ -3,7 +3,7 @@ const authService = require('./auth.service')
 const ErrorResponse = require("../../../utils/errorResponse");
 
 async function login(req, res, next) {
-    let DTO = await authService.login(req.body, next);
+    let DTO = await authService.login(req.body);
 
     if(DTO.error) //nếu có lỗi
     {

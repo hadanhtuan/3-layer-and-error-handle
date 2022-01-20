@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 var jwt = require('jsonwebtoken');
 const sendEmail = require('../../../utils/sendEmail')
 
-async function login(body, next) {
+async function login(body) {
 
     try {
     const account = await Account.findOne({email: body.email})
